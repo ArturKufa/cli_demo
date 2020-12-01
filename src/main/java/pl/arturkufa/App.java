@@ -5,9 +5,7 @@ package pl.arturkufa;
 
 import picocli.CommandLine;
 import pl.arturkufa.pack.CompressUtilityCommand;
-import pl.arturkufa.text.TextCommand;
 
-import java.util.stream.Stream;
 
 public class App {
     public static void main(String[] args) {

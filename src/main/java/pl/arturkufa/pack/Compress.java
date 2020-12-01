@@ -4,7 +4,7 @@ import picocli.CommandLine;
 
 import java.io.File;
 
-@CommandLine.Command(name = "compress", version = "1.0")
+@CommandLine.Command(name = "compress", version = "1.0", mixinStandardHelpOptions = true)
 public class Compress implements Runnable{
 
     @CommandLine.Option(names = {"-t", "--timestamp"},
