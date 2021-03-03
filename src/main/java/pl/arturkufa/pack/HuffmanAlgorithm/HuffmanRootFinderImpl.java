@@ -8,20 +8,19 @@ public class HuffmanRootFinderImpl implements HuffmanRootFinder {
         HuffmanNode root = null;
         while (q.size() > 1) {
 
-            HuffmanNode x = q.peek();
-            q.poll();
-            HuffmanNode y = q.peek();
-            q.poll();
+            HuffmanNode x = q.poll();
+            HuffmanNode y = q.poll();
 
             int xFreq = x.getFrequency();
+            assert y != null;
             int yFreq = y.getFrequency();
             int newNodeFreq = xFreq + yFreq;
 
-            HuffmanNode f = new HuffmanNode('-', newNodeFreq, x, y);
+            HuffmanNode f = new HuffmanNode(newNodeFreq, x, y);
             root = f;
             q.add(f);
-
         }
+
         return root;
     }
 }

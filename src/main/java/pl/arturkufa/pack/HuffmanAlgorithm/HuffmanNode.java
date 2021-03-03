@@ -1,30 +1,34 @@
 package pl.arturkufa.pack.HuffmanAlgorithm;
 
-public class HuffmanNode {
-    private int frequency;
-    private char c;
+public class HuffmanNode implements Comparable<HuffmanNode> {
+    private Integer frequency;
+    private Character c;
     private HuffmanNode left, right;
 
-    HuffmanNode (char c, int frequency, HuffmanNode left, HuffmanNode right) {
+    HuffmanNode (Character c, int frequency, HuffmanNode left, HuffmanNode right) {
         this.c = c;
         this.frequency = frequency;
         this.left = left;
         this.right = right;
     }
 
-    public int getFrequency() {
+    HuffmanNode (int frequency, HuffmanNode left, HuffmanNode right) {
+        this(null, frequency, left, right);
+    }
+
+    public Integer getFrequency() {
         return frequency;
     }
 
-    public void setFrequency(int frequency) {
+    public void setFrequency(Integer frequency) {
         this.frequency = frequency;
     }
 
-    public char getC() {
+    public Character getC() {
         return c;
     }
 
-    public void setC(char c) {
+    public void setC(Character c) {
         this.c = c;
     }
 
@@ -42,6 +46,11 @@ public class HuffmanNode {
 
     public void setRight(HuffmanNode right) {
         this.right = right;
+    }
+
+    @Override
+    public int compareTo(HuffmanNode o) {
+        return this.getFrequency().compareTo(o.getFrequency());
     }
 }
 

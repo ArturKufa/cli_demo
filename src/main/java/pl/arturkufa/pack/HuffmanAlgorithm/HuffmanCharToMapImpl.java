@@ -1,11 +1,11 @@
 package pl.arturkufa.pack.HuffmanAlgorithm;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class HuffmanCharToMapImpl implements HuffmanCharToMap {
     @Override
-    public HashMap<Character, Integer> charToMap(String source) {
-        HashMap<Character, Integer> charCountMap = new HashMap<>();
+    public LinkedHashMap<Character, Integer> charToMap(String source) {
+        LinkedHashMap<Character, Integer> charCountMap = new LinkedHashMap<>();
         char[] strArray = source.toCharArray();
 
         for (char c : strArray) {

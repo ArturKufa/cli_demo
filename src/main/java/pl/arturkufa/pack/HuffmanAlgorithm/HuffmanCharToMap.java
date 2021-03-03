@@ -1,7 +1,8 @@
 package pl.arturkufa.pack.HuffmanAlgorithm;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public interface HuffmanCharToMap {
-    HashMap<Character, Integer> charToMap(String source);
+    LinkedHashMap<Character, Integer> charToMap(String source);
 }

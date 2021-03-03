@@ -15,10 +15,6 @@ class HuffmanEncoderTest {
 
     @Test
     void shouldReturnMapOfEncodedCharacters() {
-        String testString = "ziemniaki";
 
-        Map<Character, String> result = huffmanEncoder.encode(testString);
-
-        assertThat(result.get('z')).isEqualTo("000");
     }
 }

@@ -59,4 +59,6 @@ class HuffmanCharToMapTest {
 
         assertThat(charMap.get(' ')).isEqualTo(1);
     }
+
+    //napisać test na liczbę
 }
